@@ -1,0 +1,36 @@
+
+h1{
+    color: crimson;
+    text-align: center;
+}
+#center {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    background-color: white;
+    text-align: justify;
+}
+#background{
+    background-image: url('../img/parma.jpg');
+}
+.nav-bar{
+    justify-content: end;
+}
+img{
+    height: 200px;
+    width: 300px;
+}
+.textImg{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+#imgText{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+p, h3{
+    margin-left: 10px;
+    margin-right: 10px;
+}
