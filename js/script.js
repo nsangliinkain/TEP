@@ -24,3 +24,62 @@ function calculateCarbon() {
     var resultElement = document.getElementById('result');
     resultElement.innerHTML = "Le emissioni di carbonio associate al consumo di questo alimento sono: " + carbonEmissions + " kg CO2eq.";
 }
+
+
+const recipeImages = [
+    "img/cibo/anolini-in-brodo.jpg",
+    "img/cibo/cappelletti.jpg",
+    "img/cibo/torta-di-riso.jpg",
+    "img/cibo/parmigiana_di_melanzane.jpeg",
+    "img/cibo/tagliolini_al_culatello.jpg",
+    "img/cibo/tortelli_alle_erbette.jpg",
+    "img/cibo/trippa_alla_parmigiana.jpg",
+    "img/cibo/rosa_di_parma.jpg",
+    "img/cibo/caval_pist.jpg",
+    "img/cibo/castagnaccio.jpg",
+    "img/cibo/sbrisolata.jpeg"
+];
+  
+function loadRecipes() {
+    const recipes = [
+        { title: "Anolini in brodo", ingredients: "Ingredienti: Pasta all'uovo ripiena, brodo di carne." },
+        { title: "Cappelletti", ingredients: "Ingredienti: Pasta all'uovo ripiena di carne." },
+        { title: "Torta di riso", ingredients: "Ingredienti: Riso, latte, zucchero, uova." },
+        { title: "Parmigiana di melanzane", ingredients: "Ingredienti: Melanzane, pomodoro, mozzarella, parmigiano." },
+        { title: "Tagliolini al culatello", ingredients: "Ingredienti: Tagliolini, culatello." },
+        { title: "Tortelli alle erbette", ingredients: "Ingredienti: Pasta all'uovo ripiena di erbette." },
+        { title: "Trippa alla parmigiana", ingredients: "Ingredienti: Trippa, pomodoro, parmigiano." },
+        { title: "Rosa di Parma", ingredients: "Ingredienti: Prosciutto crudo, formaggio." },
+        { title: "Cavàl Pist (Pesto di Cavallo)", ingredients: "Ingredienti: Carne di cavallo, vino rosso, erbe aromatiche." },
+        { title: "Castagnaccio", ingredients: "Ingredienti: Farina di castagne, acqua, uva passa, pinoli." },
+        { title: "Sbrisolata", ingredients: "Ingredienti: Farina, burro, zucchero, cannella." }
+    ];
+    
+
+    const mainContent = document.getElementById('main-content');
+
+    recipes.forEach((recipe, index) => {
+        const recipeElement = document.createElement('div');
+        recipeElement.classList.add('recipe');
+        recipeElement.innerHTML = `
+        <h2>${recipe.title}</h2>
+        <img src="${recipeImages[index]}" alt="${recipe.title}">
+        <p>${recipe.ingredients}</p>
+        `;
+        mainContent.appendChild(recipeElement);
+    });
+}
+
+function isAtBottom() {
+return window.innerHeight + window.scrollY >= document.body.offsetHeight;
+}
+
+window.addEventListener('scroll', function() {
+if (isAtBottom()) {
+    loadRecipes();
+}
+});
+
+loadRecipes();
+  
+  
