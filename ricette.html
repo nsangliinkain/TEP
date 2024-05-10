@@ -7,38 +7,40 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/app.css">
-  <script src="js/script.js"></script>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg">
-      <div class="container">
+    <div class="container">
         <b>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">HOME</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="motivo.html">PERCHE'?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sostenibilitaAmbientale.html">SOSTENIBILIA' AMBIENTALE</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="calcolatore.html">CALCOLATORE DI CARBONIO ALIMENTARE</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ricette.html">PIATTI TIPICI</a>
-              </li>
-            </ul>
-          </div>
-        </b> 
-      </div>
-  </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="motivo.html">PERCHE'?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sostenibilitaAmbientale.html">SOSTENIBILIA' AMBIENTALE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calcolatore.html">CALCOLATORE DI CARBONIO ALIMENTARE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="certificazioni.html">CERTIFICAZIONI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ricette.html">PIATTI TIPICI</a>
+                    </li>
+                </ul>
+            </div>
+        </b>
+    </div>
+</nav>
   <div class="center">
     <header>
       <h1>Piatti Tipici di Parma</h1>
@@ -62,6 +64,83 @@
         <p>Ingredienti: Riso, brodo, parmigiano.</p>
       </div>
     </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="certificazioni.html">Previous</a></li>
+            <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const recipeImages = [
+            "img/cibo/anolini-in-brodo.jpg",
+            "img/cibo/cappelletti.jpg",
+            "img/cibo/torta-di-riso.jpg",
+            "img/cibo/parmigiana_di_melanzane.jpeg",
+            "img/cibo/tagliolini_al_culatello.jpg",
+            "img/cibo/tortelli_alle_erbette.jpg",
+            "img/cibo/trippa_alla_parmigiana.jpg",
+            "img/cibo/rosa_di_parma.jpg",
+            "img/cibo/caval_pist.jpg",
+            "img/cibo/castagnaccio.jpg",
+            "img/cibo/sbrisolata.jpeg"
+        ];
+
+        let scrollCounter = 0; // Counter for tracking scroll events
+
+        function loadRecipes() {
+            const recipes = [
+                { title: "Anolini in brodo", ingredients: "Ingredienti: Pasta all'uovo ripiena, brodo di carne." },
+                { title: "Cappelletti", ingredients: "Ingredienti: Pasta all'uovo ripiena di carne." },
+                { title: "Torta di riso", ingredients: "Ingredienti: Riso, latte, zucchero, uova." },
+                { title: "Parmigiana di melanzane", ingredients: "Ingredienti: Melanzane, pomodoro, mozzarella, parmigiano." },
+                { title: "Tagliolini al culatello", ingredients: "Ingredienti: Tagliolini, culatello." },
+                { title: "Tortelli alle erbette", ingredients: "Ingredienti: Pasta all'uovo ripiena di erbette." },
+                { title: "Trippa alla parmigiana", ingredients: "Ingredienti: Trippa, pomodoro, parmigiano." },
+                { title: "Rosa di Parma", ingredients: "Ingredienti: Prosciutto crudo, formaggio." },
+                { title: "Cavàl Pist (Pesto di Cavallo)", ingredients: "Ingredienti: Carne di cavallo, vino rosso, erbe aromatiche." },
+                { title: "Castagnaccio", ingredients: "Ingredienti: Farina di castagne, acqua, uva passa, pinoli." },
+                { title: "Sbrisolata", ingredients: "Ingredienti: Farina, burro, zucchero, cannella." }
+            ];
+
+            const mainContent = document.getElementById('main-content');
+
+            recipes.forEach((recipe, index) => {
+                const recipeElement = document.createElement('div');
+                recipeElement.classList.add('recipe');
+                recipeElement.innerHTML = `
+                    <h2>${recipe.title}</h2>
+                    <img src="${recipeImages[index]}" alt="${recipe.title}">
+                    <p>${recipe.ingredients}</p>
+                `;
+                mainContent.appendChild(recipeElement);
+            });
+
+            scrollCounter++; // Increment the scroll counter
+            if (scrollCounter >= 5) {
+                // Remove the scroll event listener after reaching the limit
+                window.removeEventListener('scroll', scrollHandler);
+            }
+        }
+
+        function isAtBottom() {
+            return window.innerHeight + window.scrollY >= document.body.offsetHeight;
+        }
+
+        function scrollHandler() {
+            if (isAtBottom()) {
+                loadRecipes();
+            }
+        }
+
+        // Attach scroll event listener
+        window.addEventListener('scroll', scrollHandler);
+    });
+</script>
+
+<div class="footer">
+    <p>Realizzato da Nsanglii Nkain, Matteo Purici e Lorenzo Bernazzoli di 4C INF</p>
+</div>
 </body>
 </html>

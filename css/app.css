@@ -89,3 +89,18 @@ section {
     border-bottom: 1px solid #ccc;
     padding: 10px;
 }
+
+.certificazioni{
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.certificazioni h2 {
+    margin-top: 0;
+}
+
+.certificazioni p {
+    margin-bottom: 0;
+}
