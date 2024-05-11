@@ -104,3 +104,8 @@ section {
 .certificazioni p {
     margin-bottom: 0;
 }
+h1{
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
