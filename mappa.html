@@ -40,6 +40,7 @@
     <div class="center">
         <header><h1>Dove mangiare tipico di Parma?</h1></header>
         <div id="map" class="map"></div>
+<<<<<<< HEAD
         <div id="restaurantDetails" class="card">
             <div class="card-body">
                 <h5 class="card-title" id="restaurantTitle"></h5>
@@ -48,6 +49,9 @@
                 <a href="#" class="btn btn-primary" id="googleMapsBtn">Apri in Google Maps</a>
             </div>
         </div>
+=======
+        <div id="restaurantName" class="restaurant-name"></div> <!-- Add a div to display restaurant name -->
+>>>>>>> 12e41ae0ea2cd0038d467f21a62881d5ee95f4e0
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function(){
@@ -60,11 +64,16 @@
                 ],
                 view: new ol.View({
                     center: ol.proj.fromLonLat([10.3279, 44.8015]),
+<<<<<<< HEAD
                     zoom: 15
+=======
+                    zoom: 14
+>>>>>>> 12e41ae0ea2cd0038d467f21a62881d5ee95f4e0
                 })
             });
 
             var restaurants = [
+<<<<<<< HEAD
                 { name: "Ristorante Cocchi", coords: [10.30757, 44.80565], address: "Via Carlo Pisacane, 44, 43123 Parma PR", hours: "12:00 - 15:00, 19:00 - 23:00" },
                 { name: "Trattoria Corrieri", coords: [10.32528, 44.80146], address: "Strada della Repubblica, 71, 43123 Parma PR", hours: "12:00 - 15:00, 19:00 - 23:00" },
                 { name: "Ristorante Gallo D'Oro", coords: [10.32820, 44.80090], address: "Via Massimo D'Azeglio, 57, 43125 Parma PR", hours: "12:00 - 15:00, 19:00 - 23:00" },
@@ -105,11 +114,38 @@
 
                             $('#restaurantDetails').modal('show');
                         }
+=======
+                { name: "Ristorante Cocchi", coords: [10.30757, 44.80565] },
+                { name: "Trattoria Corrieri", coords: [10.32528, 44.80146] },
+                { name: "Ristorante Gallo D'Oro", coords: [10.32820, 44.80090]},
+                { name: "Sorelle Picchi", coords: [10.32759, 44.79967] },
+                { name: "Albergo Ristorante Leon d'Oro", coords: [10.33013, 44.80869]},
+                { name: "Antica Corte Pallavicina", coords: [10.08582, 45.02134]},
+                { name: "Trattoria del Grillo", coords: [10.33070, 44.72039]},
+                { name: "Antica osteria della Ghiaia", coords: [10.32497, 44.80334]},
+                { name: "Trattoria Scarica", coords: [10.33212, 44.74206]},
+                { name: "Trattoria del Tribunale", coords: [10.32748, 44.80035]},
+                { name: "Ristorante La Forchetta", coords: [10.32993, 44.80348]},
+                { name: "Ristorante La Greppia", coords: [10.32889, 44.80603]},
+                { name: "Osteria dei Servi", coords: [10.32517, 44.80347]},
+                { name: "Pepen", coords: [10.32870, 44.80176]},
+                { name: "Degusteria Romani", coords: [10.32778, 44.80111]}
+            ];
+
+            map.on('click', function(event) {
+                map.forEachFeatureAtPixel(event.pixel, function(feature, layer) {
+                    if (feature) {
+                        var restaurantNameElement = document.getElementById('restaurantName');
+                        restaurantNameElement.innerText = feature.get('name');
+>>>>>>> 12e41ae0ea2cd0038d467f21a62881d5ee95f4e0
                     }
                 });
             });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 12e41ae0ea2cd0038d467f21a62881d5ee95f4e0
             restaurants.forEach(function(restaurant) {
                 var marker = new ol.Feature({
                     geometry: new ol.geom.Point(ol.proj.fromLonLat(restaurant.coords))

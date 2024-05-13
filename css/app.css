@@ -106,5 +106,9 @@ section {
 }
 #map {
     width: 100%;
+<<<<<<< HEAD
     height: 600px;
+=======
+    height: 400px; /* Adjust height as needed */
+>>>>>>> 12e41ae0ea2cd0038d467f21a62881d5ee95f4e0
 }
