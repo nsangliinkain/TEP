@@ -7,8 +7,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/app.css">
     <title>Certificazioni e Marchi di Qualità</title>
+    <style>
+        img{
+            height: 300px;
+            width: 300px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Certificazioni e Marchi di Qualità</h1>
+    </header>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <b>
@@ -32,13 +41,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="ricette.html">PIATTI TIPICI</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mappa.html">DOVE MANGIARE CIBO TIPICO</a>
+                        </li>
                     </ul>
                 </div>
             </b>
         </div>
     </nav>
     <div class="center">
-        <header><h1>Certificazioni e Marchi di Qualità</h1></header>
         <p style="text-align: center;margin-top: 20px;">Premi sul bottone "Visualizza Certificazione" per vedere alcune delle tante certificazioni riguardanti il cibo che esistono.</p>
         </p>
         <div id="certification" class="container my-4"></div>
@@ -50,7 +61,7 @@
                 { name: "DOP - Denominazione di Origine Protetta", image: "img/certificazioni/dop.png", description: "Certificazione che garantisce l'origine geografica di un prodotto e il rispetto di tradizioni e tecniche di produzione locali." },
                 { name: "IGP - Indicazione Geografica Protetta", image: "img/certificazioni/igp.png", description: "Certificazione che attesta l'origine geografica di un prodotto, ma con una maggiore flessibilità nelle fasi di produzione." },
                 { name: "STG - Specialità Tradizionale Garantita", image: "img/certificazioni/stg.png", description: "Certificazione che garantisce la tradizionalità di un prodotto e il rispetto di specifiche regole di produzione." },
-                { name: "BIO - Agricoltura Biologica", image: "img/certificazioni/bio.jpeg", description: "Certificazione che attesta che un prodotto è stato coltivato o prodotto secondo metodi biologici, senza l'uso di pesticidi o fertilizzanti chimici di sintesi." },
+                { name: "BIO - Agricoltura Biologica", image: "img/certificazioni/bio.jpg", description: "Certificazione che attesta che un prodotto è stato coltivato o prodotto secondo metodi biologici, senza l'uso di pesticidi o fertilizzanti chimici di sintesi." },
                 { name: "DOC - Denominazione di Origine Controllata", image: "img/certificazioni/ddoc.jpg", description: "Certificazione che garantisce l'origine geografica e il rispetto delle regole di produzione per vini e alcuni prodotti alimentari." },
                 { name: "DOCG - Denominazione di Origine Controllata e Garantita", image: "img/certificazioni/docg.jpg", description: "Certificazione che rappresenta il livello più alto di riconoscimento per i vini italiani, garantendo l'origine controllata e la qualità garantita." },
                 { name: "IGT - Indicazione Geografica Tipica", image: "img/certificazioni/igt.jpg", description: "Certificazione che garantisce l'origine geografica di un prodotto, ma con una minore rigidità nelle regole di produzione rispetto alla DOP e all'IGP." }

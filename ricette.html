@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <header>
+        <h1>Piatti Tipici di Parma</h1>
+    </header>
   <nav class="navbar navbar-expand-lg">
     <div class="container">
         <b>
@@ -33,15 +36,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="ricette.html">PIATTI TIPICI</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mappa.html">DOVE MANGIARE CIBO TIPICO</a>
+                    </li>
                 </ul>
             </div>
         </b>
     </div>
 </nav>
   <div class="center">
-    <header>
-      <h1>Piatti Tipici di Parma</h1>
-    </header>
+    
     <div id="main-content" class="center">
       <div class="recipe">
         <h2>Tortelli</h2>
@@ -60,14 +64,19 @@
         <img src="img/cibo/risotto_parmigiano.jpeg" alt="Immagine del risotto al parmigiano">
         <p>Ingredienti: Riso, brodo, parmigiano.</p>
       </div>
+      
     </div>
+    <p>Vuoi scoprire dove mangiare cibi come questi? Scoprilo nella prossima e ultima sezione di questo sito.</p>
     <nav aria-label="Page navigation example">
         <ul class="pagination">
             <li class="page-item"><a class="page-link" href="certificazioni.html">Previous</a></li>
-            <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+            <li class="page-item"><a class="page-link" href="mappa.html">Next</a></li>
         </ul>
     </nav>
   </div>
+    <div class="footer">
+        <p>Realizzato da Nsanglii Nkain, Matteo Purici e Lorenzo Bernazzoli di 4C INF</p>
+    </div>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
         const recipeImages = [
@@ -81,7 +90,10 @@
             "img/cibo/rosa_di_parma.jpg",
             "img/cibo/caval_pist.jpg",
             "img/cibo/castagnaccio.jpg",
-            "img/cibo/sbrisolata.jpeg"
+            "img/cibo/sbrisolata.jpeg",
+            "img/cibo/tortelli.jpg",
+            "img/cibo/torta_fritta.jpg",
+            "img/cibo/risotto_parmigiano.jpeg"
         ];
 
         let scrollCounter = 0; // Counter for tracking scroll events
@@ -135,9 +147,5 @@
         window.addEventListener('scroll', scrollHandler);
     });
 </script>
-
-<div class="footer">
-    <p>Realizzato da Nsanglii Nkain, Matteo Purici e Lorenzo Bernazzoli di 4C INF</p>
-</div>
 </body>
 </html>
