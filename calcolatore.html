@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="css/app.css">
     <script src="js/script.js"></script>
     <title>Calcolatore di Carbonio Alimentare</title>
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -62,7 +68,7 @@
         <button onclick="calculateCarbon()">Calcola Emissioni di Carbonio</button>
         <div id="result"></div>
         <nav aria-label="Page navigation example">
-            <ul class="pagination">
+            <ul class="pagination justify-content-between">
                 <li class="page-item"><a class="page-link" href="motivo.html">Previous</a></li>
                 <li class="page-item"><a class="page-link" href="certificazioni.html">Next</a></li>
             </ul>
