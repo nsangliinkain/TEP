@@ -20,6 +20,5 @@ function calculateCarbon() {
             carbonEmissions = 0;
     }
 
-    var resultElement = document.getElementById('result');
-    resultElement.innerHTML = "Le emissioni di carbonio associate al consumo di questo alimento sono: " + carbonEmissions + " kg CO2eq.";
+    document.getElementById('result').innerHTML = "Le emissioni di carbonio associate al consumo di questo alimento sono: " + carbonEmissions + " kg CO2eq.";
 }
